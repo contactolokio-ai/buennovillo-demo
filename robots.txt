@@ -1,0 +1,8 @@
+# DEMO: bloquear todo hasta publicar. Al publicar, borrar la línea "Disallow: /".
+User-agent: *
+Disallow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /lib/
+
+Sitemap: https://dominio-por-confirmar.cl/sitemap.xml

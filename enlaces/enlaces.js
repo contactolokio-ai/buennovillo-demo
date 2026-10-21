@@ -1,0 +1,3 @@
+(function(){var w=document.getElementById('lwa');w.href=(SITE.whatsapp?'https://wa.me/'+SITE.whatsapp:'https://wa.me/')+'?text='+encodeURIComponent('Hola Buen Novillo, quiero hacer un pedido');
+[['lwa','wa'],['lcat','grid'],['lmap','pin'],['lweb','link']].forEach(function(a){var e=document.getElementById(a[0]);e.insertAdjacentHTML('afterbegin',ICON(a[1]));e.insertAdjacentHTML('beforeend',ICON('chev',18))});
+if(!SITE.whatsapp){w.querySelector('.grow').insertAdjacentHTML('beforeend',' <em class="tbd" style="background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.4)">número por confirmar</em>')}})();
