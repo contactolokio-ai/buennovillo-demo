@@ -10,5 +10,5 @@ window.SITE = {
   instagram: null, facebook: null,
   despacho: null,            // POR CONFIRMAR (¿despacho a domicilio? ¿comunas?)
   adminHash: "46aebd7be2c89f864d911bc5d4a254a2802593f0e0422d0148dc407afe498dea",           // sha256 de la contraseña DEMO pública (buennovillo-demo), sin valor: el admin/editor demo solo guarda en localStorage
-  version: 2
+  version: 3
 };

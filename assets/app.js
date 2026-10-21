@@ -3,6 +3,7 @@ const S=window.SITE, I=window.ICON, $=(q,c)=>(c||document).querySelector(q), $$=
 const fmt=n=>'$'+Math.round(n).toLocaleString('es-CL');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const CATICON={vacuno:'cow',cerdo:'pig',pollo:'bird',asado:'flame',packs:'box'};
+const CATIMG={vacuno:'vacuno',cerdo:'costillar',pollo:'pechuga',asado:'longaniza',packs:'parrilla'};
 let DATA=null, cart=JSON.parse(localStorage.getItem('bn_cart')||'[]');
 const ROOT=document.body.dataset.root||'/';
 
@@ -48,23 +49,31 @@ function footer(){
    <div class="fbrand"><img src="${ROOT}assets/logo.webp" alt="Carnicería Buen Novillo" width="84" height="84"><p>Carnicería de barrio en Quilicura. Cortes de vacuno, cerdo y pollo.</p></div>
    <div><h3>Categorías</h3><ul>${cats.map(c=>`<li><a href="${ROOT}catalogo/?cat=${c.id}">${esc(c.nombre)}</a></li>`).join('')}</ul></div>
    <div><h3>Visítanos</h3><ul><li>Av. Bernardo O'Higgins 382, Quilicura</li><li>Horario: ${S.horario?esc(S.horario):'<em class="tbd">Por confirmar</em>'}</li><li><a href="${S.mapsUrl}" target="_blank" rel="noopener">Ver en Google Maps</a></li></ul></div>
-   <div><h3>Contacto</h3><ul><li>WhatsApp: ${S.whatsapp?esc(S.whatsapp):'<em class="tbd">Por confirmar</em>'}</li><li>Teléfono: ${S.telefono?esc(S.telefono):'<em class="tbd">Por confirmar</em>'}</li><li><a href="${ROOT}enlaces/">Todos nuestros enlaces</a></li></ul></div>
+   <div><h3>Contacto</h3><ul><li>WhatsApp: ${S.whatsapp?esc(S.whatsapp):'<em class="tbd">Por confirmar</em>'}</li><li>Teléfono: ${S.telefono?esc(S.telefono):'<em class="tbd">Por confirmar</em>'}</li><li><a href="${ROOT}enlaces/">Todos nuestros enlaces</a></li><li><a href="${ROOT}creditos/">Créditos de imágenes</a></li></ul></div>
   </div><div class="lokio"><span>© ${new Date().getFullYear()} Carnicería Buen Novillo</span><span>Sitio web creado por <a href="https://lokio.cl" target="_blank" rel="noopener">LOKIO</a></span></div></div></footer>`;
 }
 function card(p){
   const out=p.stock===false;
   const price=p.precio?`<div class="price">${fmt(p.precio)} <small>/ ${p.unidad}</small>${p.precioAntes?`<s>${fmt(p.precioAntes)}</s>`:''}</div>`:`<div class="price tbd">Precio por confirmar</div>`;
-  return `<article class="card"><div class="ph">${p.imagen?`<img src="${esc(p.imagen)}" alt="${esc(p.nombre)}" loading="lazy">`:`<div class="pend">${I('image',30)}Foto pendiente</div>`}${out?'<span class="badge out">Sin stock</span>':(p.precioAntes&&p.precio?`<span class="badge">-${Math.round(100-100*p.precio/p.precioAntes)}%</span>`:'')}</div>
-  <div class="cbody"><span class="sub">${esc(p.subcategoria)}</span><h3>${esc(p.nombre)}</h3>${price}
+  return `<article class="card"><div class="ph" data-det="${p.id}">${p.imagen?`<img src="${src(p.imagen)}" alt="${esc(p.nombre)} (imagen referencial)" loading="lazy" width="800" height="600">${p.imagenReferencial!==false?'<span class="refl">Imagen referencial</span>':''}`:`<div class="pend">${I('image',30)}Foto pendiente</div>`}${out?'<span class="badge out">Sin stock</span>':(p.precioAntes&&p.precio?`<span class="badge">-${Math.round(100-100*p.precio/p.precioAntes)}%</span>`:'')}</div>
+  <div class="cbody"><span class="sub">${esc(p.subcategoria)}</span><h3><button class="plink" data-det="${p.id}">${esc(p.nombre)}</button></h3>${price}
   <div class="buy"><div class="qty" data-id="${p.id}"><button data-d="-1" aria-label="Menos">${I('minus',16)}</button><span data-q>${p.unidad==='kg'?'1 kg':'1 un.'}</span><button data-d="1" aria-label="Más">${I('plus',16)}</button></div>
   <button class="btn btn-red" data-add="${p.id}" ${out?'disabled style="opacity:.5"':''}>${I('cart',18)} Agregar</button></div></div></article>`;
 }
+const src=u=>/^(https?:|data:)/.test(u)?u:ROOT+u;
 const STEP=u=>u==='kg'?0.5:1;
 function bindCards(root){
+  $$('[data-det]',root).forEach(e=>e.onclick=()=>detail(e.dataset.det));
   $$('.qty',root).forEach(q=>{const p=DATA.productos.find(x=>x.id===q.dataset.id);q.dataset.v=1;
     q.onclick=e=>{const b=e.target.closest('button');if(!b)return;let v=+q.dataset.v+STEP(p.unidad)*b.dataset.d;v=Math.max(STEP(p.unidad),v);q.dataset.v=v;$('[data-q]',q).textContent=p.unidad==='kg'?String(v).replace('.',',')+' kg':v+' un.'}});
   $$('[data-add]',root).forEach(b=>b.onclick=()=>{const id=b.dataset.add,q=$(`.qty[data-id="${id}"]`,b.closest('.card'));add(id,+q.dataset.v)});
 }
+function detail(id){const p=DATA.productos.find(x=>x.id===id);if(!p)return;const m=document.createElement('div');m.className='ov on det';
+ m.innerHTML=`<div class="dbox" role="dialog" aria-label="${esc(p.nombre)}"><button class="xbtn dx" aria-label="Cerrar">${I('x')}</button><div class="ph">${p.imagen?`<img src="${src(p.imagen)}" alt="${esc(p.nombre)} (imagen referencial)">${p.imagenReferencial!==false?'<span class="refl">Imagen referencial</span>':''}`:`<div class="pend">${I('image',30)}Foto pendiente</div>`}</div>
+ <div class="cbody"><span class="sub">${esc(DATA.categorias.find(c=>c.id===p.categoria)?.nombre||'')} · ${esc(p.subcategoria)}</span><h3 style="font-size:22px">${esc(p.nombre)}</h3>${p.precio?`<div class="price">${fmt(p.precio)} <small>/ ${p.unidad}</small></div>`:'<div class="price tbd">Precio por confirmar</div>'}
+ <p class="note">${p.descripcion?esc(p.descripcion):'Pídelo por kilo o por unidad. Si quieres un grosor o corte especial, escríbelo en el comentario del pedido.'}${p.imagenReferencial!==false&&p.imagen?' La foto es referencial: no corresponde al producto exacto del local.':''}</p>
+ <button class="btn btn-red" data-dadd>${I('cart',18)} Agregar 1 ${p.unidad==='kg'?'kg':'unidad'}</button></div></div>`;
+ document.body.appendChild(m);m.onclick=e=>{if(e.target===m||e.target.closest('.dx'))m.remove();if(e.target.closest('[data-dadd]')){add(p.id,1);m.remove()}}}
 function add(id,qty){const it=cart.find(x=>x.id===id);if(it)it.qty+=qty;else cart.push({id,qty});save();const p=DATA.productos.find(x=>x.id===id);toast(p.nombre+' agregado al pedido')}
 function save(){localStorage.setItem('bn_cart',JSON.stringify(cart));$('#cartn').textContent=cart.length;if($('#drawer').classList.contains('on'))renderCart()}
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),1800)}
@@ -83,7 +92,7 @@ function sendOrder(){
   window.open(waLink(txt),'_blank','noopener');
 }
 function home(){
-  const g=$('#cats'); if(g) g.innerHTML=DATA.categorias.map(c=>`<a class="cat" href="${ROOT}catalogo/?cat=${c.id}"><span class="ico">${I(CATICON[c.id]||'knife',34)}</span><b>${esc(c.nombre)}</b><small>${c.subcategorias.slice(0,3).join(' · ')}</small></a>`).join('');
+  const g=$('#cats'); if(g) g.innerHTML=DATA.categorias.map(c=>`<a class="cat${CATIMG[c.id]?' cat-img':''}" href="${ROOT}catalogo/?cat=${c.id}">${CATIMG[c.id]?`<img src="${ROOT}assets/productos/${CATIMG[c.id]}.webp" alt="" loading="lazy" width="800" height="600">`:''}<span class="ico">${I(CATICON[c.id]||'knife',34)}</span><b>${esc(c.nombre)}</b><small>${c.subcategorias.slice(0,3).join(' · ')}</small></a>`).join('');
   const d=$('#dest'); if(d){d.innerHTML=DATA.productos.filter(p=>p.destacado).map(card).join('');bindCards(d)}
   const a=$('#asado'); if(a){a.innerHTML=DATA.productos.filter(p=>p.subcategoria==='Cortes de asado').map(card).join('');bindCards(a)}
   const t=$('#horario'); if(t&&S.horario)t.textContent=S.horario;

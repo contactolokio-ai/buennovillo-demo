@@ -56,10 +56,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/tira.webp",
    "stock": true,
    "destacado": true,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "punta-de-ganso",
@@ -69,10 +70,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": true,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "entrana",
@@ -82,10 +84,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/entrana.webp",
    "stock": true,
    "destacado": true,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "plateada",
@@ -95,10 +98,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "tapapecho",
@@ -108,10 +112,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "asado-carnicero",
@@ -121,10 +126,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "lomo-vetado",
@@ -134,10 +140,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vetado.webp",
    "stock": true,
    "destacado": true,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "lomo-liso",
@@ -147,10 +154,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/steak2.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "filete",
@@ -160,10 +168,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/steak2.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "punta-de-picana",
@@ -173,10 +182,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/steak2.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "posta-negra",
@@ -186,10 +196,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "posta-rosada",
@@ -199,10 +210,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "pollo-ganso",
@@ -212,10 +224,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "ganso",
@@ -225,10 +238,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "osobuco",
@@ -238,10 +252,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "tapabarriga",
@@ -251,10 +266,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "huachalomo",
@@ -264,10 +280,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "sobrecostilla",
@@ -277,10 +294,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "choclillo",
@@ -290,10 +308,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/vacuno.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "carne-molida-especial",
@@ -303,10 +322,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/molida.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "carne-molida-corriente",
@@ -316,10 +336,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/molida.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "costillar-de-cerdo",
@@ -329,10 +350,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/costillar.webp",
    "stock": true,
    "destacado": true,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "chuleta-vetada",
@@ -342,10 +364,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/chuleta.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "chuleta-centro",
@@ -355,10 +378,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/chuleta.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "pulpa-de-cerdo",
@@ -368,10 +392,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/chuleta.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "pernil",
@@ -381,10 +406,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/chuleta.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "lomo-de-cerdo",
@@ -394,10 +420,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/chuleta.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "pechuga-entera",
@@ -407,10 +434,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/pechuga.webp",
    "stock": true,
    "destacado": true,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "filetito-de-pechuga",
@@ -420,10 +448,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/pechuga.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "trutro-entero",
@@ -433,10 +462,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/trutro.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "trutro-corto",
@@ -446,10 +476,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/trutro.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "pollo-entero",
@@ -459,10 +490,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/trutro.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "alitas",
@@ -472,10 +504,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/alitas.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "longaniza",
@@ -485,10 +518,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/longaniza.webp",
    "stock": true,
    "destacado": true,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "chorizo-parrillero",
@@ -498,10 +532,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/longaniza.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "prieta",
@@ -511,10 +546,11 @@
    "unidad": "kg",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/parrilla.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "carbon",
@@ -524,10 +560,11 @@
    "unidad": "unidad",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/parrilla.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "sal-de-mar",
@@ -540,7 +577,8 @@
    "imagen": null,
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": false
   },
   {
    "id": "pack-parrillero",
@@ -550,10 +588,11 @@
    "unidad": "unidad",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/parrilla.webp",
    "stock": true,
    "destacado": true,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   },
   {
    "id": "pack-familiar",
@@ -563,10 +602,11 @@
    "unidad": "unidad",
    "precio": null,
    "precioAntes": null,
-   "imagen": null,
+   "imagen": "assets/productos/parrilla.webp",
    "stock": true,
    "destacado": false,
-   "descripcion": ""
+   "descripcion": "",
+   "imagenReferencial": true
   }
  ],
  "promociones": [],

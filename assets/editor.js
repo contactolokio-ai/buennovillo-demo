@@ -38,5 +38,5 @@ function start(){
 }
 const STEPS=['Bienvenido al editor. Los textos con borde punteado se pueden cambiar: tócalos y escribe.','Las fotos con borde rojo se cambian tocándolas y eligiendo una imagen de tu celular.','Usa Deshacer y Rehacer si te equivocas. Tus cambios se guardan como borrador solos.','Cuando esté listo, toca Publicar. Salir te devuelve a la web normal.'];
 function tour(i){const m=modal(`<b style="color:#DE2329">Paso ${i+1} de ${STEPS.length}</b><p>${STEPS[i]}</p><button>${i<STEPS.length-1?'Siguiente':'Empezar'}</button>`);m.querySelector('button').onclick=()=>{m.remove();if(i<STEPS.length-1)tour(i+1);else localStorage.setItem('bn_tour','1')}}
-const s=document.createElement('script');s.src=(document.body.dataset.root||'/')+'assets/auth.js?v=2';s.onload=()=>login();document.head.appendChild(s);
+const s=document.createElement('script');s.src=(document.body.dataset.root||'/')+'assets/auth.js?v=3';s.onload=()=>login();document.head.appendChild(s);
 })();

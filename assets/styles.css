@@ -152,3 +152,19 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}footer a:hover
 .toast{visibility:hidden}.toast.on{visibility:visible}
 .shead a{white-space:nowrap;font-size:15px}
 @media (max-width:760px){.shead h2{font-size:23px}.hero-art{height:210px}.hero-art img{width:180px}}
+.refl{position:absolute;right:10px;bottom:10px;background:rgba(20,20,20,.62);color:#fff;font-size:11px;font-weight:600;letter-spacing:.02em;border-radius:999px;padding:3px 9px;backdrop-filter:blur(4px)}
+.ph{overflow:hidden;cursor:pointer}.ph img{transition:transform .35s}.card:hover .ph img{transform:scale(1.04)}
+.plink{font:inherit;text-align:left;padding:0}
+.hero-photo{background:#111}.hero-photo:before{display:none}.hero-photo .hp{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover;filter:none;opacity:.92}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#141414 0%,rgba(20,20,20,.35) 35%,rgba(20,20,20,0) 70%)}
+.hero-photo .hseal{position:absolute;right:22px;top:22px;width:96px!important;z-index:2;filter:drop-shadow(0 8px 20px rgba(0,0,0,.45))}
+.hero-photo .refl{z-index:2}
+.cat-img{position:relative;overflow:hidden;padding:0;min-height:190px;justify-content:flex-end;color:#fff;background:#141414}
+.cat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.cat-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 25%,rgba(0,0,0,.78) 100%)}
+.cat-img:hover{border-color:var(--red)}.cat-img:hover img{transform:scale(1.05)}
+.cat-img .ico,.cat-img b,.cat-img small{position:relative;z-index:1}.cat-img .ico{width:48px;height:48px;margin-bottom:-2px}.cat-img .ico .ic{width:26px;height:26px}
+.cat-img b{font-size:17px}.cat-img small{color:#e6e6e6;padding:0 10px 16px}
+.det{display:grid;place-items:center;z-index:80;padding:16px}.dbox{background:#fff;border-radius:26px;overflow:hidden;width:min(460px,100%);max-height:92vh;overflow-y:auto;position:relative}
+.dbox .ph{aspect-ratio:4/3;cursor:default}.dbox .cbody{padding:18px 20px 22px;gap:10px}.dx{position:absolute;top:12px;right:12px;z-index:3;background:#fff}
+@media (max-width:760px){.hero-photo{height:230px}.hero-photo:after{background:linear-gradient(180deg,rgba(20,20,20,0) 45%,#141414 100%)}.hero-photo .hseal{width:72px!important;right:14px;top:14px}.cat-img{min-height:160px}.refl{font-size:10px;padding:2px 8px}}
