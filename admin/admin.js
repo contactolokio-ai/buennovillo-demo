@@ -1,13 +1,13 @@
 (function(){
 const $=q=>document.querySelector(q),app=$('#app'),I=ICON;let D,tab='prod';
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-async function load(){const l=localStorage.getItem('bn_data');if(l)return JSON.parse(l);return (await fetch('/data/products.json?v='+SITE.version)).json()}
+async function load(){const l=localStorage.getItem('bn_data');if(l)return JSON.parse(l);return (await fetch('../data/products.json?v='+SITE.version)).json()}
 function save(msg){localStorage.setItem('bn_data',JSON.stringify(D));flash(msg||'Guardado')}
 function flash(t){let e=$('#toast');if(!e){e=document.createElement('div');e.id='toast';e.className='toast';document.body.appendChild(e)}e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),1500)}
-function login(){app.innerHTML=`<form class="login" id="lf"><img src="/assets/logo.webp" alt="Buen Novillo"><h1 style="font-size:22px">Panel de la tienda</h1><input type="password" id="pw" placeholder="Contraseña" autocomplete="current-password"><button class="btn btn-red">Entrar</button><p id="err" style="color:var(--red);margin:0"></p></form>`;
+function login(){app.innerHTML=`<form class="login" id="lf"><img src="../assets/logo.webp" alt="Buen Novillo"><h1 style="font-size:22px">Panel de la tienda</h1><input type="password" id="pw" placeholder="Contraseña" autocomplete="current-password"><button class="btn btn-red">Entrar</button><p id="err" style="color:var(--red);margin:0"></p></form>`;
  $('#lf').onsubmit=async e=>{e.preventDefault();if(await BNAuth.check($('#pw').value)){BNAuth.login();main()}else $('#err').textContent='Contraseña incorrecta'}}
 const TABS=[['prod','Productos y stock'],['cat','Categorías'],['promo','Promociones'],['pop','Popup'],['cup','Cupones'],['acc','Cuenta']];
-function shell(body){app.innerHTML=`<div class="ah"><div class="wrap"><img src="/assets/logo.webp" alt=""><b>Panel Buen Novillo</b><a class="btn btn-red" href="/#editor">Editar web</a><button class="btn btn-ghost" style="color:#141414" id="help" aria-label="Ayuda">${I('help',18)}</button><a class="btn btn-ghost" style="color:#141414" href="/">Ver web</a></div></div>
+function shell(body){app.innerHTML=`<div class="ah"><div class="wrap"><img src="../assets/logo.webp" alt=""><b>Panel Buen Novillo</b><a class="btn btn-red" href="../#editor">Editar web</a><button class="btn btn-ghost" style="color:#141414" id="help" aria-label="Ayuda">${I('help',18)}</button><a class="btn btn-ghost" style="color:#141414" href="../">Ver web</a></div></div>
 <div class="wrap"><div class="tabs">${TABS.map(([k,n])=>`<button data-t="${k}" class="${tab===k?'on':''}">${n}</button>`).join('')}</div>${body}</div>`;
  app.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{tab=b.dataset.t;main()});$('#help').onclick=()=>help(0)}
 const catOpts=v=>D.categorias.map(c=>`<option value="${c.id}" ${c.id===v?'selected':''}>${esc(c.nombre)}</option>`).join('');
